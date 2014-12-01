@@ -38,6 +38,7 @@ group :test do
   gem 'guard-minitest',     '2.3.1'
   gem 'database_cleaner', '~> 1.3.0'
   gem 'capybara', '~> 2.4.4'
+  gem 'shoulda-matchers', '2.7'
 end
 
 group :production do

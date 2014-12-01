@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @report.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @report.last_name %>
+</p>
+
+<p>
+  <strong>CMLP number:</strong>
+  <%= @report.clmp_number %>
+</p>
+
+<p>
+  <strong>Body name:</strong>
+  <%= @report.body_name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @report.body_id %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @report.contact_id %>
+</p>
+
+<p>
+  <strong>Site number:</strong>
+  <%= @report.site_number %>
+</p>
+
+<p>
+  <strong>Lake depth:</strong>
+  <%= @report.lake_depth %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @report.county %>
+</p>
+
+<p>
+  <strong>Phone 1:</strong>
+  <%= @report.phone_1 %>
+</p>
+
+<p>
+  <strong>Phone 2:</strong>
+  <%= @report.phone_2 %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @report.email %>
+</p>
+
+<p>
+  <strong>Previous year:</strong>
+  <%= @report.previous_year %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

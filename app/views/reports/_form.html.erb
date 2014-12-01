@@ -1,0 +1,69 @@
+<%= form_for(@report) do |f| %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :clmp_number %><br>
+    <%= f.text_field :clmp_number %>
+  </div>
+  <div class="field">
+    <%= f.label :body_name %><br>
+    <%= f.text_field :body_name %>
+  </div>
+  <div class="field">
+    <%= f.label :body_id %><br>
+    <%= f.text_field :body_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_id %><br>
+    <%= f.number_field :contact_id %>
+  </div>
+  <div class="field">
+    <%= f.label :site_number %><br>
+    <%= f.text_field :site_number %>
+  </div>
+  <div class="field">
+    <%= f.label :lake_depth %><br>
+    <%= f.text_field :lake_depth %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br>
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_1 %><br>
+    <%= f.text_field :phone_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_2 %><br>
+    <%= f.text_field :phone_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_year %><br>
+    <%= f.check_box :previous_year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<h1>Listing reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>CLMP number</th>
+      <th>Body name</th>
+      <th>Body</th>
+      <th>Contact</th>
+      <th>Site number</th>
+      <th>Lake depth</th>
+      <th>County</th>
+      <th>Phone 1</th>
+      <th>Phone 2</th>
+      <th>Email</th>
+      <th>Previous year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.first_name %></td>
+        <td><%= report.last_name %></td>
+        <td><%= report.clmp_number %></td>
+        <td><%= report.body_name %></td>
+        <td><%= report.body_id %></td>
+        <td><%= report.contact_id %></td>
+        <td><%= report.site_number %></td>
+        <td><%= report.lake_depth %></td>
+        <td><%= report.county %></td>
+        <td><%= report.phone_1 %></td>
+        <td><%= report.phone_2 %></td>
+        <td><%= report.email %></td>
+        <td><%= report.previous_year %></td>
+        <td><%= link_to 'Show', report %></td>
+        <td><%= link_to 'Edit', edit_report_path(report) %></td>
+        <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report', new_report_path %>
